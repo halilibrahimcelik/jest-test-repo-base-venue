@@ -81,7 +81,7 @@
     {
       "files": ["cypress/**/?(*.)+(spec|test).[jt]s?(x)", "cypress/support/*"],
       "extends": ["plugin:cypress/recommended"],
-      "env": { "cypress/globals": true }
+      "env": { "cypress/globals": true, "jest": true }
     }
   ]
 }

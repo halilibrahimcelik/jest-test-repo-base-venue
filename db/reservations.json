@@ -88,5 +88,23 @@
     "showId": 1726416672,
     "userId": 1,
     "seatCount": 8
+  },
+  {
+    "id": 86524038,
+    "showId": 1726330272,
+    "userId": 1,
+    "seatCount": 3
+  },
+  {
+    "id": 6696824,
+    "showId": 1726330272,
+    "userId": 1,
+    "seatCount": 8
+  },
+  {
+    "id": 1884696,
+    "showId": 1726330272,
+    "userId": 1,
+    "seatCount": 2
   }
 ]
