@@ -16,7 +16,8 @@ const customJestConfig = {
     // Handle module aliases (this will be automatically configured for you soon)
     '^@/(.*)$': '<rootDir>/$1',
   },
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: 'jsdom',
+
   setupFiles: ['./jest.polyfills.js'],
   testEnvironmentOptions: {
     customExportConditions: [''],

@@ -8,6 +8,16 @@
 import '@testing-library/jest-dom/extend-expect';
 import { server } from './__tests__/__mocks__/msw/server';
 
-beforeAll(() => server.listen());
+beforeAll(() =>
+  server.listen({
+    onUnhandledRequest: ({ method, url }) => {
+      console.log(url, 'url in jest.setup.js');
+
+      if (!url.pathname.includes('/api')) {
+        throw new Error(`Unhandled ${method} request to ${url}`);
+      }
+    },
+  })
+);
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
