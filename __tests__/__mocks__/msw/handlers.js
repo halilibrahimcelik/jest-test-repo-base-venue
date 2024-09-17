@@ -16,9 +16,16 @@ export const handlers = [
   http.get(
     'http://localhost:3000/api/users/:userId/reservations',
     async ({ params, request, cookies }) => {
-      return HttpResponse.json({
-        userReservations: fakeUserReservations,
-      });
+      const { userId } = params;
+      if (userId === '1') {
+        return HttpResponse.json({
+          userReservations: fakeUserReservations,
+        });
+      } else if (userId === '0') {
+        return HttpResponse.json({
+          userReservations: [],
+        });
+      }
     }
   ),
 ];
