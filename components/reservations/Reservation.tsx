@@ -63,7 +63,6 @@ export const Reservation = ({ showId, submitPurchase }: ReservationProps) => {
       refreshInterval: FIFTEEN_SECONDS,
     }
   );
-  console.log(show);
   if (error) return <QueryError message='Could not retrieve show info' />;
 
   return (

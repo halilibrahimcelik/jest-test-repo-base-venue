@@ -24,6 +24,7 @@ const customJestConfig = {
   testPathIgnorePatterns: [
     '<rootDir>/__tests__/__mocks__/msw/server.js',
     '<rootDir>/__tests__/__mocks__/msw/handlers.js',
+    '<rootDir>/__tests__/__mocks__/*',
   ],
 };
 
